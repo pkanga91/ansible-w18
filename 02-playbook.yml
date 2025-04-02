@@ -1,0 +1,16 @@
+---
+- hosts: ws
+  become: yes 
+  become_user: root
+  ignore_errors: yes
+  tasks:
+   - name: Create a list of groups
+     group:
+      state: present
+      name: "{{ item }}"
+     loop:  
+       - linuxsa
+       - cloud
+       - security
+       - devops
+     

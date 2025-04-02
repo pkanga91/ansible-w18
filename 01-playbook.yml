@@ -1,0 +1,52 @@
+---
+- hosts: ws
+  become: yes 
+  become_user: root
+  ignore_errors: yes 
+  vars:
+    pkg: httpd
+  vars_files:
+     - vars.yml
+
+  tasks:
+    - name: Install package from file
+      package:
+        name: "{{ p_name }}"
+        state: present
+      tags:
+        - package 
+    - name: Install package
+      yum:
+        name:  "{{ pkg }}"          # '*' will update all package 
+        state: present  
+    - name: Uptime
+      command: uptime
+      
+    - name: Create file
+      file: path=/tmp/ansiblefile1.txt state=touch
+    - name: Add content to my file
+      copy:
+        dest: /tmp/ansiblefile1.txt
+        content: >  # > this create one line or | for multilines
+            #######################
+            This is ansible at work 
+            #######################
+    - name: Create a file
+      file:
+        path: /tmp/automation.log
+        state: directory   # touch for file 
+    - name: Create Group
+      group:
+        name: Cloud 
+        state: present
+    - name: Create user
+      user:
+        name: u5bt
+        comment: Serge Admin
+        group: Cloud
+
+    - name: Check cpu
+      command: nproc  
+    - name: Check os version
+      shell: cat /etc/passwd | grep root  
+  

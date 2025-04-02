@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  ignore_errors: true
+  gather_facts: true
+  vars_files:
+  tasks:
+    - name: file creation
+      file:
+        path: playbook.yaml
+        state: touch
+    - name: Install package
+      yum:
+        name: curl
+        state: present
+      when: ansible_distribution == "Amazon"
+    - name: script execution
+      shell: ./script.sh
+      when: ansible_processor_cores >= 2 and ansible_distribution == "Amazon"

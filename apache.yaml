@@ -1,0 +1,38 @@
+---
+- hosts: ws
+  become: true
+  vars:
+    pkg_name: httpd
+    app_name: utc-app
+  tasks:
+   - name: Update system
+     yum:
+       name: "*"
+       state: latest
+   - name: Create folder for app
+     file:
+      state: directory
+      path: "{{item}}"
+     loop:
+      - /opt/{{ app_name }} 
+      - /opt/{{ app_name }}/log
+      - /opt/{{ app_name }}/deploy
+   - name: Install Apache
+     yum:
+      - name: httpd
+        state: present
+   - name: Start demon
+     service:
+       name: httpd
+       state: started           
+   - name: Copy index to target
+     template:
+      src: index.j2
+      dest: /var/www/html/index.html
+     notify: Restart Apache
+     
+  handlers: 
+   - name: Restart Apache
+     service: 
+       name: httpd
+       state: restarted    

@@ -1,0 +1,24 @@
+---
+- hosts: all
+  become: true
+  ignore_errors: true
+  tasks:
+   
+    - name: Download Package 
+      get_url: 
+       url: "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.tar.xz"
+       mode: '0644'
+       dest: /tmp  # /tmp/linux-6.14.tar.xz
+    - name: Check if file exist   
+      stat:
+        path: /tmp/linux-6.14.tar.xz
+      register: file_info
+    - name: Display file_info
+      debug:
+        var: file_info.stat.exists
+    - name: Unarchhive package Downloade
+      unarchive:
+        src: /tmp/linux-6.14.tar.xz
+        dest: /tmp
+        remote_src: yes
+      when: file_info.stat.exists == true  

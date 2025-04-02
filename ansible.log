@@ -1,0 +1,422 @@
+2025-03-31 23:04:20,129 p=2862 u=ansible n=ansible | 172.31.17.95 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-31 23:04:22,807 p=2862 u=ansible n=ansible | 172.31.12.37 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-03-31 23:24:01,092 p=3419 u=ansible n=ansible | ERROR! conflicting action statements: get_url, url
+
+The error appears to be in '/home/ansible/ansible-dev/downloadpackage.yaml': line 7, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: Download Package
+      ^ here
+
+2025-03-31 23:24:17,892 p=3448 u=ansible n=ansible | playbook: downloadpackage.yaml
+2025-03-31 23:24:29,528 p=3481 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:24:29,550 p=3481 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:24:32,172 p=3481 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:24:33,511 p=3481 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:24:33,526 p=3481 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:24:34,338 p=3481 u=ansible n=ansible | changed: [172.31.17.95]
+2025-03-31 23:24:34,854 p=3481 u=ansible n=ansible | changed: [172.31.12.37]
+2025-03-31 23:24:34,882 p=3481 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:24:34,882 p=3481 u=ansible n=ansible | 172.31.12.37               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:24:34,882 p=3481 u=ansible n=ansible | 172.31.17.95               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:24:43,841 p=3599 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:24:43,855 p=3599 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:24:45,409 p=3599 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:24:45,440 p=3599 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:24:45,454 p=3599 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:24:47,306 p=3599 u=ansible n=ansible | changed: [172.31.12.37]
+2025-03-31 23:24:47,307 p=3599 u=ansible n=ansible | changed: [172.31.17.95]
+2025-03-31 23:24:47,319 p=3599 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:24:47,319 p=3599 u=ansible n=ansible | 172.31.12.37               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:24:47,320 p=3599 u=ansible n=ansible | 172.31.17.95               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:30:22,369 p=3705 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:30:22,381 p=3705 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:30:24,134 p=3705 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:30:24,283 p=3705 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:30:24,297 p=3705 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:30:26,655 p=3705 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:30:26,712 p=3705 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:30:26,725 p=3705 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:30:27,549 p=3705 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:30:27,627 p=3705 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:30:27,641 p=3705 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:30:27,641 p=3705 u=ansible n=ansible | 172.31.12.37               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:30:27,642 p=3705 u=ansible n=ansible | 172.31.17.95               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:32:34,649 p=3833 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:32:34,668 p=3833 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:32:36,613 p=3833 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:32:36,737 p=3833 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:32:36,752 p=3833 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:32:38,766 p=3833 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:32:39,158 p=3833 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:32:39,164 p=3833 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:32:39,781 p=3833 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:32:40,090 p=3833 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:32:40,109 p=3833 u=ansible n=ansible | TASK [Display file_info] *******************************************************************************************************
+2025-03-31 23:32:40,168 p=3833 u=ansible n=ansible | ok: [172.31.12.37] => {
+    "file_info": {
+        "changed": false,
+        "failed": false,
+        "stat": {
+            "atime": 1743463486.122843,
+            "attr_flags": "",
+            "attributes": [],
+            "block_size": 4096,
+            "blocks": 291816,
+            "charset": "binary",
+            "checksum": "eb12c4d17f6756a33e58373089af85d5cbc03ead",
+            "ctime": 1743463486.866841,
+            "dev": 66305,
+            "device_type": 0,
+            "executable": false,
+            "exists": true,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 5064595,
+            "isblk": false,
+            "ischr": false,
+            "isdir": false,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": true,
+            "issock": false,
+            "isuid": false,
+            "mimetype": "application/x-xz",
+            "mode": "0644",
+            "mtime": 1743463486.6548417,
+            "nlink": 1,
+            "path": "/tmp/linux-6.14.tar.xz",
+            "pw_name": "root",
+            "readable": true,
+            "rgrp": true,
+            "roth": true,
+            "rusr": true,
+            "size": 149408504,
+            "uid": 0,
+            "version": "1632748391",
+            "wgrp": false,
+            "woth": false,
+            "writeable": true,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": false
+        }
+    }
+}
+2025-03-31 23:32:40,188 p=3833 u=ansible n=ansible | ok: [172.31.17.95] => {
+    "file_info": {
+        "changed": false,
+        "failed": false,
+        "stat": {
+            "atime": 1743463486.7737157,
+            "attr_flags": "e",
+            "attributes": [
+                "extents"
+            ],
+            "block_size": 4096,
+            "blocks": 291824,
+            "charset": "binary",
+            "checksum": "eb12c4d17f6756a33e58373089af85d5cbc03ead",
+            "ctime": 1743463486.7697158,
+            "dev": 66305,
+            "device_type": 0,
+            "executable": false,
+            "exists": true,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 259601,
+            "isblk": false,
+            "ischr": false,
+            "isdir": false,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": true,
+            "issock": false,
+            "isuid": false,
+            "mimetype": "application/x-xz",
+            "mode": "0644",
+            "mtime": 1743463486.613721,
+            "nlink": 1,
+            "path": "/tmp/linux-6.14.tar.xz",
+            "pw_name": "root",
+            "readable": true,
+            "rgrp": true,
+            "roth": true,
+            "rusr": true,
+            "size": 149408504,
+            "uid": 0,
+            "version": "27879568",
+            "wgrp": false,
+            "woth": false,
+            "writeable": true,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": false
+        }
+    }
+}
+2025-03-31 23:32:40,202 p=3833 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:32:40,202 p=3833 u=ansible n=ansible | 172.31.12.37               : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:32:40,202 p=3833 u=ansible n=ansible | 172.31.17.95               : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:36:39,839 p=3958 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:36:39,868 p=3958 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:36:41,576 p=3958 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:36:41,854 p=3958 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:36:41,874 p=3958 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:36:44,009 p=3958 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:36:44,218 p=3958 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:36:44,224 p=3958 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:36:44,921 p=3958 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:36:44,990 p=3958 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:36:45,001 p=3958 u=ansible n=ansible | TASK [Display file_info] *******************************************************************************************************
+2025-03-31 23:36:45,027 p=3958 u=ansible n=ansible | ok: [172.31.12.37] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:36:45,046 p=3958 u=ansible n=ansible | ok: [172.31.17.95] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:36:45,060 p=3958 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:36:45,061 p=3958 u=ansible n=ansible | 172.31.12.37               : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:36:45,061 p=3958 u=ansible n=ansible | 172.31.17.95               : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:44:22,787 p=4151 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:44:22,798 p=4151 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:44:24,511 p=4151 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:44:24,607 p=4151 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:44:24,619 p=4151 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:44:26,725 p=4151 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:44:26,948 p=4151 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:44:26,955 p=4151 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:44:27,736 p=4151 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:44:27,893 p=4151 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:44:27,910 p=4151 u=ansible n=ansible | TASK [Display file_info] *******************************************************************************************************
+2025-03-31 23:44:27,933 p=4151 u=ansible n=ansible | ok: [172.31.12.37] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:44:27,946 p=4151 u=ansible n=ansible | ok: [172.31.17.95] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:44:27,963 p=4151 u=ansible n=ansible | TASK [Unarchhive package Downloade] ********************************************************************************************
+2025-03-31 23:44:27,985 p=4151 u=ansible n=ansible | skipping: [172.31.12.37]
+2025-03-31 23:44:27,994 p=4151 u=ansible n=ansible | skipping: [172.31.17.95]
+2025-03-31 23:44:28,016 p=4151 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:44:28,016 p=4151 u=ansible n=ansible | 172.31.12.37               : ok=4    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-31 23:44:28,016 p=4151 u=ansible n=ansible | 172.31.17.95               : ok=4    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-31 23:45:24,744 p=4287 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:45:24,756 p=4287 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:45:26,513 p=4287 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:45:27,308 p=4287 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:45:27,320 p=4287 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:45:29,524 p=4287 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:45:29,884 p=4287 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:45:29,906 p=4287 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:45:30,591 p=4287 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:45:30,731 p=4287 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:45:30,752 p=4287 u=ansible n=ansible | TASK [Display file_info] *******************************************************************************************************
+2025-03-31 23:45:30,806 p=4287 u=ansible n=ansible | ok: [172.31.12.37] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:45:30,822 p=4287 u=ansible n=ansible | ok: [172.31.17.95] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:45:30,844 p=4287 u=ansible n=ansible | TASK [Unarchhive package Downloade] ********************************************************************************************
+2025-03-31 23:45:31,049 p=4287 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-03-31 23:45:31,050 p=4287 u=ansible n=ansible | fatal: [172.31.12.37]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/linux-6.14.tar.xz' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-03-31 23:45:31,050 p=4287 u=ansible n=ansible | ...ignoring
+2025-03-31 23:45:31,062 p=4287 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-03-31 23:45:31,062 p=4287 u=ansible n=ansible | fatal: [172.31.17.95]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/linux-6.14.tar.xz' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-03-31 23:45:31,062 p=4287 u=ansible n=ansible | ...ignoring
+2025-03-31 23:45:31,081 p=4287 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:45:31,081 p=4287 u=ansible n=ansible | 172.31.12.37               : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2025-03-31 23:45:31,081 p=4287 u=ansible n=ansible | 172.31.17.95               : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2025-03-31 23:50:18,172 p=4579 u=ansible n=ansible | PLAY [all] *********************************************************************************************************************
+2025-03-31 23:50:18,183 p=4579 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-03-31 23:50:19,952 p=4579 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:50:20,236 p=4579 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:50:20,250 p=4579 u=ansible n=ansible | TASK [Download Package] ********************************************************************************************************
+2025-03-31 23:50:22,447 p=4579 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:50:22,627 p=4579 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:50:22,640 p=4579 u=ansible n=ansible | TASK [Check if file exist] *****************************************************************************************************
+2025-03-31 23:50:23,365 p=4579 u=ansible n=ansible | ok: [172.31.17.95]
+2025-03-31 23:50:23,515 p=4579 u=ansible n=ansible | ok: [172.31.12.37]
+2025-03-31 23:50:23,523 p=4579 u=ansible n=ansible | TASK [Display file_info] *******************************************************************************************************
+2025-03-31 23:50:23,549 p=4579 u=ansible n=ansible | ok: [172.31.12.37] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:50:23,578 p=4579 u=ansible n=ansible | ok: [172.31.17.95] => {
+    "file_info.stat.exists": true
+}
+2025-03-31 23:50:23,605 p=4579 u=ansible n=ansible | TASK [Unarchhive package Downloade] ********************************************************************************************
+2025-03-31 23:51:05,636 p=4579 u=ansible n=ansible | changed: [172.31.17.95]
+2025-03-31 23:51:52,831 p=4579 u=ansible n=ansible | changed: [172.31.12.37]
+2025-03-31 23:51:52,862 p=4579 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-03-31 23:51:52,862 p=4579 u=ansible n=ansible | 172.31.12.37               : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-31 23:51:52,862 p=4579 u=ansible n=ansible | 172.31.17.95               : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 00:02:21,743 p=4955 u=ansible n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2025-04-01 00:02:21,744 p=4955 u=ansible n=ansible | PLAY [local] *******************************************************************************************************************
+2025-04-01 00:02:21,745 p=4955 u=ansible n=ansible | skipping: no hosts matched
+2025-04-01 00:02:21,745 p=4955 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-04-01 00:02:47,281 p=4987 u=ansible n=ansible | PLAY [localhost] ***************************************************************************************************************
+2025-04-01 00:02:47,296 p=4987 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-04-01 00:02:49,227 p=4987 u=ansible n=ansible | ok: [localhost]
+2025-04-01 00:02:49,242 p=4987 u=ansible n=ansible | TASK [create ec2 instance] *****************************************************************************************************
+2025-04-01 00:02:54,140 p=4987 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: botocore.exceptions.NoCredentialsError: Unable to locate credentials
+2025-04-01 00:02:54,141 p=4987 u=ansible n=ansible | fatal: [localhost]: FAILED! => {"boto3_version": "1.37.23", "botocore_version": "1.37.23", "changed": false, "msg": "Could not describe default VPC: Unable to locate credentials"}
+2025-04-01 00:02:54,144 p=4987 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-04-01 00:02:54,145 p=4987 u=ansible n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 00:05:24,988 p=5204 u=ansible n=ansible | PLAY [localhost] ***************************************************************************************************************
+2025-04-01 00:05:25,025 p=5204 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-04-01 00:05:26,216 p=5204 u=ansible n=ansible | ok: [localhost]
+2025-04-01 00:05:26,235 p=5204 u=ansible n=ansible | TASK [create ec2 instance] *****************************************************************************************************
+2025-04-01 00:05:44,665 p=5204 u=ansible n=ansible | changed: [localhost]
+2025-04-01 00:05:44,678 p=5204 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-04-01 00:05:44,678 p=5204 u=ansible n=ansible | localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 00:07:51,502 p=5350 u=ansible n=ansible | PLAY [localhost] ***************************************************************************************************************
+2025-04-01 00:07:51,514 p=5350 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-04-01 00:07:52,541 p=5350 u=ansible n=ansible | ok: [localhost]
+2025-04-01 00:07:52,554 p=5350 u=ansible n=ansible | TASK [create ec2 instance] *****************************************************************************************************
+2025-04-01 00:08:39,823 p=5350 u=ansible n=ansible | changed: [localhost]
+2025-04-01 00:08:39,837 p=5350 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-04-01 00:08:39,838 p=5350 u=ansible n=ansible | localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 01:12:54,930 p=5976 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "msg": "to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program"
+}
+2025-04-01 01:22:13,745 p=6572 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "msg": "The module wind_ping was not found in configured module paths"
+}
+2025-04-01 01:22:31,894 p=6605 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "msg": "to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program"
+}
+2025-04-01 01:23:23,101 p=6659 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "msg": "The module wind_ping was not found in configured module paths"
+}
+2025-04-01 01:27:15,919 p=7009 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "msg": "The module wind_ping was not found in configured module paths"
+}
+2025-04-01 01:27:53,004 p=7080 u=ansible n=ansible | 54.91.136.96 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Invalid/incorrect password: Permission denied, please try again.",
+    "unreachable": true
+}
+2025-04-01 01:28:32,307 p=7133 u=ansible n=ansible | 54.91.136.96 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "module_stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:4 char:21\r\n+ def _ansiballz_main():\r\n+                     ~\r\nAn expression was expected after '('.\r\nAt line:8 char:19\r\n+         os.getcwd()\r\n+                   ~\r\nAn expression was expected after '('.\r\nAt line:20 char:27\r\n+     except (AttributeError, OSError):\r\n+                           ~\r\nMissing argument in parameter list.\r\nAt line:22 char:29\r\n+     excludes = set(('', '.', scriptdir))\r\n+                             ~\r\nMissing expression after ','.\r\nAt line:22 char:30\r\n+     excludes = set(('', '.', scriptdir))\r\n+                              ~~~~~~~~~\r\nUnexpected token 'scriptdir' in expression or statement.\r\nAt line:22 char:29\r\n+     excludes = set(('', '.', scriptdir))\r\n+                             ~\r\nMissing closing ')' in expression.\r\nAt line:22 char:39\r\n+     excludes = set(('', '.', scriptdir))\r\n+                                       ~\r\nUnexpected token ')' in expression or statement.\r\nAt line:22 char:40\r\n+     excludes = set(('', '.', scriptdir))\r\n+                                        ~\r\nUnexpected token ')' in expression or statement.\r\nAt line:29 char:7\r\n+     if sys.version_info < (3,):\r\n+       ~\r\nMissing '(' after 'if' in if statement.\r\nAt line:29 char:30\r\n+     if sys.version_info < (3,):\r\n+                              ~\r\nMissing expression after ','.\r\nNot all parse errors were reported.  Correct the reported errors and try again.\"\r\nAt line:10 char:1\r\n+ $exec_wrapper = [ScriptBlock]::Create($split_parts[0])\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\r\n    + FullyQualifiedErrorId : ParseException\r\n \r\nThe expression after '&' in a pipeline element produced an object that was not valid. It must result in a command \r\nname, a script block, or a CommandInfo object.\r\nAt line:11 char:2\r\n+ &$exec_wrapper\r\n+  ~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\r\n    + FullyQualifiedErrorId : BadExpression\r\n ",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+2025-04-01 01:29:42,210 p=7234 u=ansible n=ansible | 54.91.136.96 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-04-01 01:40:16,903 p=7393 u=ansible n=ansible | PLAY [wind] ********************************************************************************************************************
+2025-04-01 01:40:16,923 p=7393 u=ansible n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-04-01 01:40:21,830 p=7393 u=ansible n=ansible | ok: [54.91.136.96]
+2025-04-01 01:40:21,840 p=7393 u=ansible n=ansible | TASK [Create folder] ***********************************************************************************************************
+2025-04-01 01:40:23,240 p=7393 u=ansible n=ansible | changed: [54.91.136.96]
+2025-04-01 01:40:23,245 p=7393 u=ansible n=ansible | TASK [Download a package] ******************************************************************************************************
+2025-04-01 01:40:28,053 p=7393 u=ansible n=ansible | changed: [54.91.136.96]
+2025-04-01 01:40:28,059 p=7393 u=ansible n=ansible | TASK [Install IIS] *************************************************************************************************************
+2025-04-01 01:41:57,733 p=7393 u=ansible n=ansible | changed: [54.91.136.96]
+2025-04-01 01:41:57,737 p=7393 u=ansible n=ansible | TASK [Ensure IIS is running] ***************************************************************************************************
+2025-04-01 01:42:00,462 p=7393 u=ansible n=ansible | ok: [54.91.136.96]
+2025-04-01 01:42:00,476 p=7393 u=ansible n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-04-01 01:42:00,476 p=7393 u=ansible n=ansible | 54.91.136.96               : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-02 01:12:58,485 p=3494 u=ansible n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to be in '/home/ansible/ansible-dev/roles/system/tasks/main.yml': line 5, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  yum:
+       name: {{ package_name }}
+              ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2025-04-02 01:14:20,664 p=3521 u=ansible n=ansible | playbook: role_test.yaml
+2025-04-02 01:14:28,496 p=3549 u=ansible n=ansible | PLAY [ws] ***************************************************************************************************************
+2025-04-02 01:14:28,623 p=3549 u=ansible n=ansible | TASK [Gathering Facts] **************************************************************************************************
+2025-04-02 01:14:35,819 p=3549 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:14:35,838 p=3549 u=ansible n=ansible | TASK [system : Update system] *******************************************************************************************
+2025-04-02 01:15:02,452 p=3549 u=ansible n=ansible | changed: [172.31.12.37]
+2025-04-02 01:15:02,467 p=3549 u=ansible n=ansible | TASK [apache : Install Apache] ******************************************************************************************
+2025-04-02 01:15:10,784 p=3549 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:15:10,805 p=3549 u=ansible n=ansible | TASK [apache : Start demon] *********************************************************************************************
+2025-04-02 01:15:13,923 p=3549 u=ansible n=ansible | changed: [172.31.12.37]
+2025-04-02 01:15:13,932 p=3549 u=ansible n=ansible | TASK [apache : Create folder for app] ***********************************************************************************
+2025-04-02 01:15:14,796 p=3549 u=ansible n=ansible | changed: [172.31.12.37] => (item=/opt/utc-app)
+2025-04-02 01:15:15,352 p=3549 u=ansible n=ansible | changed: [172.31.12.37] => (item=/opt/utc-app/log)
+2025-04-02 01:15:15,834 p=3549 u=ansible n=ansible | changed: [172.31.12.37] => (item=/opt/utc-app/deploy)
+2025-04-02 01:15:15,855 p=3549 u=ansible n=ansible | TASK [apache : Copy index to target] ************************************************************************************
+2025-04-02 01:15:17,286 p=3549 u=ansible n=ansible | changed: [172.31.12.37]
+2025-04-02 01:15:17,302 p=3549 u=ansible n=ansible | RUNNING HANDLER [apache : Restart Apache] *******************************************************************************
+2025-04-02 01:15:19,043 p=3549 u=ansible n=ansible | changed: [172.31.12.37]
+2025-04-02 01:15:19,055 p=3549 u=ansible n=ansible | PLAY RECAP **************************************************************************************************************
+2025-04-02 01:15:19,055 p=3549 u=ansible n=ansible | 172.31.12.37               : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-02 01:23:45,726 p=3891 u=ansible n=ansible | Starting galaxy role install process
+2025-04-02 01:23:45,961 p=3891 u=ansible n=ansible | - downloading role 'java', owned by geerlingguy
+2025-04-02 01:23:46,276 p=3891 u=ansible n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/2.5.0.tar.gz
+2025-04-02 01:23:46,421 p=3891 u=ansible n=ansible | - extracting geerlingguy.java to /home/ansible/.ansible/roles/geerlingguy.java
+2025-04-02 01:23:46,438 p=3891 u=ansible n=ansible | - geerlingguy.java (2.5.0) was installed successfully
+2025-04-02 01:26:03,686 p=3927 u=ansible n=ansible | Starting galaxy role install process
+2025-04-02 01:26:03,687 p=3927 u=ansible n=ansible | [WARNING]: - geerlingguy.java (2.5.0) is already installed - use --force to change version to unspecified
+
+2025-04-02 01:34:03,558 p=4159 u=ansible n=ansible | Starting galaxy role install process
+2025-04-02 01:34:03,674 p=4159 u=ansible n=ansible | - downloading role 'ntp', owned by geerlingguy
+2025-04-02 01:34:04,100 p=4159 u=ansible n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-ntp/archive/2.7.0.tar.gz
+2025-04-02 01:34:04,181 p=4159 u=ansible n=ansible | - extracting geerlingguy.ntp to /home/ansible/.ansible/roles/geerlingguy.ntp
+2025-04-02 01:34:04,205 p=4159 u=ansible n=ansible | - geerlingguy.ntp (2.7.0) was installed successfully
+2025-04-02 01:41:42,950 p=4221 u=ansible n=ansible | PLAY [ws] ***************************************************************************************************************
+2025-04-02 01:41:42,966 p=4221 u=ansible n=ansible | TASK [Gathering Facts] **************************************************************************************************
+2025-04-02 01:41:44,917 p=4221 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:41:44,937 p=4221 u=ansible n=ansible | TASK [system : Update system] *******************************************************************************************
+2025-04-02 01:41:48,444 p=4221 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:41:48,457 p=4221 u=ansible n=ansible | TASK [apache : Install Apache] ******************************************************************************************
+2025-04-02 01:41:49,899 p=4221 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:41:49,914 p=4221 u=ansible n=ansible | TASK [apache : Start demon] *********************************************************************************************
+2025-04-02 01:41:50,991 p=4221 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:41:51,013 p=4221 u=ansible n=ansible | TASK [apache : Create folder for app] ***********************************************************************************
+2025-04-02 01:41:51,729 p=4221 u=ansible n=ansible | ok: [172.31.12.37] => (item=/opt/utc-app)
+2025-04-02 01:41:52,142 p=4221 u=ansible n=ansible | ok: [172.31.12.37] => (item=/opt/utc-app/log)
+2025-04-02 01:41:52,640 p=4221 u=ansible n=ansible | ok: [172.31.12.37] => (item=/opt/utc-app/deploy)
+2025-04-02 01:41:52,664 p=4221 u=ansible n=ansible | TASK [apache : Copy index to target] ************************************************************************************
+2025-04-02 01:41:53,802 p=4221 u=ansible n=ansible | ok: [172.31.12.37]
+2025-04-02 01:41:53,856 p=4221 u=ansible n=ansible | PLAY RECAP **************************************************************************************************************
+2025-04-02 01:41:53,856 p=4221 u=ansible n=ansible | 172.31.12.37               : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
